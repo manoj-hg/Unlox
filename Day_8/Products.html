@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        margin:25px auto;
+        padding:0;
+        box-sizing:border-box;
+        display:flex;
+        justify-content:center;
+        gap:25px;
+        height:100vh;
+        flex-wrap:wrap;
+    }
+    .movie:hover{
+        transform:scale(1.05);
+        transition:0.3s;
+        background-color: #f0f0f0;
+        transform :rotateY(0deg);
+    }
+    .movie{
+        border:2px solid;
+        width:250px;
+        padding:20px;
+        border-radius:5px;
+        text-align:center;
+        margin-bottom:20px;
+        box-shadow:0px 0px 10px gray;   
+    }
+    .movie h2{
+        border-bottom:1px;
+    }
+    .movie img{
+        width:100%;
+        height:360px;
+        object-fit:cover;
+    }
+    .movie button{
+        background-color:orange;
+        border:none;
+        padding:10px;
+        border-radius:5px;
+
+    }
+    .back{
+        background-image:url(https://wallpapers.com/images/hd/horror-movie-collage-3795-x-2646-gzvt1v59yhar2ms1.jpg);
+       background-size:cover;
+    background-position:center;
+    width:100%;
+    height:300px;
+    color:white;
+    font-size:50px;
+    text-align:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    }
+</style>
+</head>
+<body>
+    <div class="movie">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM9TbxAf-nQ_7WcBLbZSXfAIYi9fwMZ9WJ9-vpFqcXAlEiVrbhlv9gRchN&s=10" >
+        <h2>Avengers</h2>
+        <p>Rs.200</p>
+        <button>Book</button>
+    </div>
+
+    <div class="movie">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBccZz97KhCMBcKFFL7thwmttuuDa3J13akLILerue_w&s" >
+        <h2>Dune</h2>
+        <p>Rs.200</p>
+        <button>Book</button>
+    </div>
+
+    <div class="movie">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-havBTalgab3Q1X9V5H6y7inM_cD22bNBxGaODK4ubH7zhflJPz6rFnNc&s=10" >
+        <h2>Spiderman</h2>
+        <p>Rs.200</p>
+        <button>Book</button>
+    </div>
+    <div class="back">
+        <h1> GRAB YOUR MOVIE TICKETS NOW</h1>
+        </div>
+</body>
+</html>
