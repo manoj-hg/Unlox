@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        .piano{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .key{
+            border: 1px solid black;
+            width: 60px;
+            height: 200px;
+            margin: 2px;
+            background-color: white;
+            box-shadow: 2px 2px 5px black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to Piano</h2>
+
+    <div class="piano">
+        <div class="key" data-node="C">C</div>
+        <div class="key" data-node="D">D</div>
+        <div class="key" data-node="E">E</div>
+        <div class="key" data-node="F">F</div>
+        <div class="key" data-node="G">G</div>
+    </div>
+    <audio id="audio-C" src="./hit-drums-effect-acid.wav"></audio>
+    <audio id="audio-D" src="./hit-drums-effect-decaying.wav"></audio>
+    <audio id="audio-E" src="./hit-drums-effect-hard.wav"></audio>
+    <audio id="audio-F" src="./hit-drums-effect-hollow.wav"></audio>
+    <audio id="audio-G" src="./hit-drums-effect-shimmer.wav"></audio>
+
+    <script>
+       const keys = document.querySelectorAll(".key")
+
+        console.log(keys)   //keys is the Array which is store all the div containers
+
+         keys.forEach( function(e){
+
+            const note = e.getAttribute("data-note")
+
+            const audio = document.getElementById("audio-"+note)
+          
+
+            //Action-click
+            e.addEventListener('click',function(){
+                audio.currentTime = 0;
+                audio.play()
+            })
+
+
+            //Mouse
+            e.addEventListener('mouseover',function(){
+                e.style.backgroundColor = "lightblue"
+            })
+
+            e.addEventListener('mouseout',function(){
+                e.style.backgroundColor = "white"
+            })
+
+        }) 
+    </script>
+   
+    </body>
+</html>
